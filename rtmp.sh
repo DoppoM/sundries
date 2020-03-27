@@ -25,7 +25,7 @@ echo -e "rtmp {\n
             application trancecode {\n
                     live on;\n
                     record off;\n
-                    exec ffmpeg -i "rtmp://127.0.0.1/trancecode/stream" -s 1920x1080 -r 60 -c:v libx264 -preset faster -profile:v high -g 120 -x264-params \"bitrate=8400:vbv_maxrate=8400:vbv_bufsize=8400:threads=0:bframes=3:keyint=120:keyint_min=120:nal_hrd=cbr:scenecut=0:rc=cbr:force_cfr=1\" -sws_flags lanczos -pix_fmt yuv420p -c:a copy -f flv -strict normal "rtmp://127.0.0.1/liveout";\n
+                    exec ffmpeg -i "rtmp://127.0.0.1/trancecode/stream" -s 1600x900 -r 48 -c:v libx264 -preset faster -profile:v high -g 96 -x264-params \"bitrate=8400:vbv_maxrate=8400:vbv_bufsize=8400:threads=0:bframes=3:keyint=96:keyint_min=96:nal_hrd=cbr:scenecut=0:rc=cbr:force_cfr=1\" -sws_flags lanczos -pix_fmt yuv420p -c:a copy -f flv -strict normal "rtmp://127.0.0.1/liveout";\n
             }\n
             application trancecode {\n
                     live on;\n
